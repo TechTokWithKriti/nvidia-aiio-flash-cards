@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NVIDIA NCA-AIIO Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <button type="button" id="sidebarToggle" class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar">
+      ☰ Categories
+    </button>
+
+    <aside id="sidebar" class="sidebar">
+      <h1 class="app-title">NCA-AIIO Flashcards</h1>
+      <div class="stats" id="stats"></div>
+      <nav id="filterBar" class="filter-bar" aria-label="Category filters"></nav>
+    </aside>
+
+    <main class="main-panel">
+      <div class="progress-wrap">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="progressBar">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <div id="counter" class="counter" aria-live="polite">Card 0 of 0</div>
+      </div>
+
+      <div class="card-stage">
+        <div id="flashcard" class="flashcard" tabindex="0" role="button" aria-pressed="false" aria-label="Flashcard. Press space to flip.">
+          <div class="card-inner" id="cardInner">
+            <div class="card-face card-front">
+              <div class="card-header">
+                <div class="header-left">
+                  <span class="dot" id="frontDot"></span>
+                  <span class="category-name" id="frontCategory"></span>
+                </div>
+                <div class="header-right">
+                  <button type="button" class="star-btn" id="frontStar" aria-label="Bookmark this card" aria-pressed="false">☆</button>
+                  <span class="watermark">@techtokwithkriti</span>
+                </div>
+              </div>
+              <div class="card-body front-body">
+                <div class="component-label">Component</div>
+                <div class="component-name" id="componentName"></div>
+                <div class="front-footer">
+                  <div class="tags" id="tags"></div>
+                  <div class="flip-hint">flip ↕</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-header">
+                <div class="header-left">
+                  <span class="dot" id="backDot"></span>
+                  <span class="category-name" id="backCategory"></span>
+                </div>
+                <div class="header-right">
+                  <button type="button" class="star-btn" id="backStar" aria-label="Bookmark this card" aria-pressed="false">☆</button>
+                  <span class="watermark">@techtokwithkriti</span>
+                </div>
+              </div>
+              <div class="card-body back-body">
+                <ul class="bullets" id="bullets"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="empty-state" id="emptyState" hidden>No bookmarked cards yet. Star a few cards to see them here.</p>
+      </div>
+
+      <nav class="controls" aria-label="Card navigation">
+        <button type="button" id="prevBtn">← Prev</button>
+        <button type="button" id="flipBtn">Flip ↕</button>
+        <button type="button" id="nextBtn">Next →</button>
+      </nav>
+
+      <p class="shortcuts-hint">Shortcuts: Space = flip · ← → = navigate · B = bookmark</p>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

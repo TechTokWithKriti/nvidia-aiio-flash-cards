@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flashcard App — Test Suite</title>
+  <style>
+    body { font-family: monospace; background: #05070c; color: #cbd5e1; padding: 20px; }
+    h1 { color: #e2e8f0; }
+    #results { white-space: pre-wrap; line-height: 1.6; }
+    .pass { color: #34d399; }
+    .fail { color: #f87171; }
+    #summary { font-weight: bold; margin-top: 16px; }
+    iframe { width: 480px; height: 620px; border: 1px solid #1c2333; }
+  </style>
+</head>
+<body>
+  <h1>Flashcard App — Test Suite</h1>
+  <div id="summary">Running…</div>
+  <div id="results"></div>
+  <iframe id="appFrame" src="index.html"></iframe>
+  <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Build artifact, regenerated fresh by GitHub Actions on every push
+cards.json
+
+# Project instructions, not part of the public-facing app
+CLAUDE.md
+
+# OS cruft
+.DS_Store
+
+# Editor/tooling local config, not part of the app
+.claude/
+
+# Dependency-free project; guard against this ever appearing
+node_modules/
+
+# Local scratch/source folders, never intended to be committed
+sources/
+drafts/
