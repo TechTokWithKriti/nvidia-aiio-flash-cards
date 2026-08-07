@@ -19,3 +19,18 @@ dotColor: "#38bdf8"
 <!-- TAGS: RAPIDS, Data Science -->
 - Open-source suite of GPU-accelerated data science libraries (cuDF for dataframes, cuML for machine learning, cuGraph for graph analytics, and more) with a pandas-like API
 - Accelerates ETL and analytics workloads that would otherwise run on CPU-bound tools like pandas, in some cases with no code changes needed via cuDF's pandas accelerator mode
+
+<!-- CARD: What is DGX OS? -->
+<!-- TAGS: DGX OS, Operating System -->
+- Customized Linux operating system purpose-built for NVIDIA DGX systems, built on Ubuntu 22.04 in the DGX OS 6 release
+- Bundles the software stack needed to run AI/ML workloads out of the box, including GPU drivers, the CUDA Toolkit, cuDNN, NCCL, and Docker Engine, tuned specifically for DGX hardware
+
+<!-- CARD: What do GPU drivers do? -->
+<!-- TAGS: GPU Drivers, Fundamentals -->
+- Software layer connecting the physical GPU to the operating system and applications, the same basic role any hardware driver plays for its device
+- Manages GPU resources, memory allocation, and performance optimization so the OS and applications can actually put the GPU to work on compute or graphics tasks
+
+<!-- CARD: GPU driver key features -->
+<!-- TAGS: GPU Drivers, Features -->
+- Support containerized workloads and multi-GPU configurations, letting several GPUs work together under one driver stack
+- Can be installed manually or come pre-installed on systems built for a specific workload, such as AI/ML training
