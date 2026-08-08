@@ -35,6 +35,7 @@ dotColor: "#fbbf24"
 <!-- TAGS: GPU Operator, Kubernetes -->
 - Kubernetes operator that automates provisioning and managing the software components a node needs to expose its GPUs to the cluster: the NVIDIA driver, the Kubernetes device plugin, the NVIDIA Container Runtime, automatic node labeling, and DCGM-based monitoring
 - Removes the need to manually install and version-match these components on every node, giving Kubernetes clusters a consistent, repeatable way to provision GPU resources
+- MIG-aware: detects MIG instances per GPU so Kubernetes can schedule and allocate against them, and automatically re-labels nodes as they join or leave the cluster
 
 <!-- CARD: What is the NVIDIA Container Toolkit? -->
 <!-- TAGS: Container Toolkit, Containers -->

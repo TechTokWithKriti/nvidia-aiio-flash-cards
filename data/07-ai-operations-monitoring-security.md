@@ -48,3 +48,25 @@ dotColor: "#f87171"
 <!-- TAGS: MLOps, Model Monitoring -->
 - Occurs when the statistical distribution of real-world input data shifts over time, causing a deployed model's predictions to degrade even though the model itself hasn't changed
 - Mitigated with continuous production monitoring that tracks input/output distributions and triggers retraining or model updates when drift is detected, rather than assuming a trained model stays accurate indefinitely
+
+<!-- CARD: Job scheduling vs container orchestration -->
+<!-- TAGS: Slurm, Kubernetes -->
+- Job scheduling (e.g. Slurm) allocates resources for long-running batch jobs like model training; jobs run to completion and aren't kept alive afterward
+- Container orchestration (e.g. Kubernetes) manages the lifecycle of always-on, autoscaled services, suited to inference workloads that need consistent uptime and can scale with demand
+- Job scheduling is the traditional fit for the training phase of the AI lifecycle and is typically driven by researchers, data scientists, and HPC admins; container orchestration fits the inference/serving phase and is typically driven by DevOps/MLOps/platform engineers
+
+<!-- CARD: What is MLOps? -->
+<!-- TAGS: MLOps, DevOps -->
+- Applies DevOps principles like CI/CD to machine learning pipelines, aiming to keep ML systems in production continuous, predictable, and secure rather than relying on undocumented, ad hoc processes
+- Addresses problems that surface after a model is built: getting it into production reliably, keeping it accurate as real-world data drifts, updating or replacing it without downtime, and ensuring consistent, trustworthy predictions
+
+<!-- CARD: Core MLOps capabilities -->
+<!-- TAGS: MLOps, CI/CD -->
+- CI/CD pipelines automate the training, validation, and deployment stages of the ML lifecycle
+- Event-driven scheduling automatically triggers retraining when new data arrives or on a set cadence
+- A model registry version-tracks deployed models, similar to a container registry for Docker images, so teams always know which model version is live in production
+
+<!-- CARD: NVIDIA's MLOps toolchain -->
+<!-- TAGS: MLOps, NVIDIA Toolchain -->
+- Data prep: RAPIDS and NeMo Curator; training: NVIDIA AI Enterprise, Base Command Platform, and DGX systems; optimization: TensorRT and TAO Toolkit
+- Deployment: Triton Inference Server, NIM microservices, Fleet Command, and the NGC Catalog for versioned model artifacts; monitoring: Base Command Manager, Fleet Command, and DCGM; continuous learning: TAO Toolkit and the NeMo framework for automated retraining and fine-tuning

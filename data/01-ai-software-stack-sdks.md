@@ -56,3 +56,15 @@ dotColor: "#38bdf8"
 - SDK for optimizing trained models specifically for inference, not training; takes models from frameworks like PyTorch and TensorFlow and prepares them for fast, efficient deployment
 - Key techniques: precision calibration (running the model in FP16, INT8, FP8, or lower precision to cut memory and compute cost with minimal accuracy loss) and layer fusion (collapsing chains of operations into a single optimized kernel)
 - Deploys across hyperscale data centers, workstations, and edge devices like NVIDIA Jetson
+
+<!-- CARD: What is NVIDIA NeMo? -->
+<!-- TAGS: NeMo, Generative AI -->
+- Open-source, GPU-accelerated end-to-end framework for building, customizing, and deploying generative AI models: large language models, multimodal models, and speech AI (ASR, TTS)
+- Built on PyTorch; includes tools for data curation, model pretraining/customization, retrieval-augmented generation (RAG), and guardrailing, scaling from a single GPU to thousand-node clusters
+- NeMo Curator (formerly NeMo Data Curator) is its data curation component, cleaning and deduplicating web-scale text, image, and video datasets for pretraining
+
+<!-- CARD: What is NVIDIA TAO Toolkit? -->
+<!-- TAGS: TAO Toolkit, Transfer Learning -->
+- Low-code toolkit (Train, Adapt, Optimize) built on TensorFlow and PyTorch that lets users fine-tune NVIDIA pretrained models on their own data without writing training code from scratch
+- Uses transfer learning: starts from a pretrained foundation model in the TAO model zoo and adapts it to a specific domain or task, then optimizes it to be smaller and faster at runtime
+- Covers both computer vision (classification, detection, segmentation) and conversational AI (ASR, NLP) use cases; outputs a trained model deployable via TensorRT
