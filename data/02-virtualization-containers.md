@@ -31,6 +31,16 @@ dotColor: "#fbbf24"
 - CPU virtualization is mature and standardized, with well-established hypervisors (VMware ESXi, KVM, Hyper-V) that cleanly split cores/threads into vCPUs at near-native performance
 - GPU virtualization is newer and largely vendor-specific; GPUs don't partition as cleanly as CPUs, so it relies on purpose-built techniques like vGPU or MIG, and isolation/performance both depend heavily on which approach is used
 
+<!-- CARD: What is the NVIDIA GPU Operator? -->
+<!-- TAGS: GPU Operator, Kubernetes -->
+- Kubernetes operator that automates provisioning and managing the software components a node needs to expose its GPUs to the cluster: the NVIDIA driver, the Kubernetes device plugin, the NVIDIA Container Runtime, automatic node labeling, and DCGM-based monitoring
+- Removes the need to manually install and version-match these components on every node, giving Kubernetes clusters a consistent, repeatable way to provision GPU resources
+
+<!-- CARD: What is the NVIDIA Container Toolkit? -->
+<!-- TAGS: Container Toolkit, Containers -->
+- Library and set of tools (formerly known as nvidia-docker) that lets containers running under Docker, containerd, Podman, or Kubernetes access the host's NVIDIA GPUs with full acceleration
+- One of the components the NVIDIA GPU Operator installs and manages automatically across a Kubernetes cluster
+
 <!-- CARD: What is a Kubernetes ResourceQuota for GPUs? -->
 <!-- TAGS: Kubernetes, ResourceQuota -->
 - A Kubernetes API object that caps how much of a resource, including GPUs exposed to the cluster as a schedulable resource, a namespace's pods can collectively request

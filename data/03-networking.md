@@ -164,3 +164,10 @@ dotColor: "#34d399"
 <!-- TAGS: Topology, Ring, NCCL -->
 - Nodes form a logical ring, each connected to just two neighbors; NVIDIA's NCCL library uses Ring All-Reduce as its default algorithm for synchronizing gradients across GPUs in distributed training
 - Runs in two phases (scatter-reduce, then all-gather) and is bandwidth-optimal for small to medium clusters (roughly 2 to 32 nodes), since per-node data volume stays independent of node count, unlike a star topology's central-hub bottleneck
+
+<!-- CARD: What is NCCL? -->
+<!-- TAGS: NCCL, GPU Communication -->
+- NVIDIA Collective Communications Library: software library for GPU-to-GPU communication, sitting above whatever hardware path is actually available (NVLink, NVSwitch, PCIe, InfiniBand, RoCE) instead of requiring every application to hand-code each transfer path itself
+- Topology-aware: auto-discovers the system's interconnects and picks the fastest communication pattern per collective operation and message size, rather than using one fixed strategy everywhere
+- Ships built into PyTorch and TensorFlow, providing collective operations like all-reduce, all-gather, broadcast, and reduce-scatter for distributed training
+- Complements the hardware layer rather than replacing it: NVLink/RDMA move individual transfers fast, NCCL organizes many transfers efficiently, e.g. coordinating gradient synchronization across 100 GPUs

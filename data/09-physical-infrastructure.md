@@ -113,3 +113,8 @@ dotColor: "#f97316"
 <!-- CARD: DGX Spark -->
 <!-- TAGS: DGX Spark, Desktop AI -->
 - Compact desktop AI system built on the GB10 (Grace Blackwell) Superchip
+
+<!-- CARD: What is an NVIDIA AI Factory? -->
+<!-- TAGS: AI Factory, Data Center -->
+- Purpose-built data center architecture for producing AI at scale rather than general-purpose computing: data comes in, gets processed through GPUs and the AI software stack, and a trained model or inference result comes out
+- Covers the entire AI lifecycle end-to-end (data ingestion, training, fine-tuning, and high-volume inference) using NVIDIA's integrated hardware and software stack, as opposed to a traditional data center built for varied general-purpose workloads
