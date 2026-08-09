@@ -70,3 +70,18 @@ dotColor: "#f87171"
 <!-- TAGS: MLOps, NVIDIA Toolchain -->
 - Data prep: RAPIDS and NeMo Curator; training: NVIDIA AI Enterprise, Base Command Platform, and DGX systems; optimization: TensorRT and TAO Toolkit
 - Deployment: Triton Inference Server, NIM microservices, Fleet Command, and the NGC Catalog for versioned model artifacts; monitoring: Base Command Manager, Fleet Command, and DCGM; continuous learning: TAO Toolkit and the NeMo framework for automated retraining and fine-tuning
+
+<!-- CARD: What is NVIDIA Nsight Compute? -->
+<!-- TAGS: Nsight Compute, Profiling -->
+- Low-level GPU kernel profiler for deep-diving into individual CUDA kernel performance: register usage, memory throughput, and instruction-level bottlenecks
+- Complements Nsight Systems' system-wide view; Nsight Systems answers "where is time going across the whole application," Nsight Compute answers "why is this specific kernel slow"
+
+<!-- CARD: What is NVIDIA Morpheus? -->
+<!-- TAGS: Morpheus, Cybersecurity -->
+- Open, GPU-accelerated cybersecurity AI framework for building pipelines that inspect network traffic in real time to detect threats like data leaks, phishing, and anomalous behavior that traditional tools miss
+- Built on RAPIDS, Triton Inference Server, and TensorRT, and can ingest telemetry directly from BlueField DPUs
+
+<!-- CARD: How does NVIDIA establish a GPU hardware root of trust? -->
+<!-- TAGS: Security, Hardware Root of Trust -->
+- An on-chip root of trust authenticates boot code and firmware using keys burned into write-once fuses, and Secure Boot only allows execution of distribution-signed NVIDIA drivers and firmware
+- Enables GPU attestation: the GPU can generate a verifiable report of its firmware and security state, the basis for confidential computing on NVIDIA GPUs

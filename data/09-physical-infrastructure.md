@@ -118,3 +118,27 @@ dotColor: "#f97316"
 <!-- TAGS: AI Factory, Data Center -->
 - Purpose-built data center architecture for producing AI at scale rather than general-purpose computing: data comes in, gets processed through GPUs and the AI software stack, and a trained model or inference result comes out
 - Covers the entire AI lifecycle end-to-end (data ingestion, training, fine-tuning, and high-volume inference) using NVIDIA's integrated hardware and software stack, as opposed to a traditional data center built for varied general-purpose workloads
+
+<!-- CARD: What is NVIDIA HGX? -->
+<!-- TAGS: HGX, Server Platform -->
+- NVIDIA's standardized 8-GPU baseboard bundling SXM-form-factor GPUs, NVLink, and NVSwitch into a fixed reference design that OEMs (Dell, Supermicro, HPE, and others) build servers around
+- Distinct from DGX: DGX is NVIDIA's own complete branded system (GPUs, CPU, storage, software), while HGX is the GPU baseboard component OEMs use to build their own AI servers
+
+<!-- CARD: What is NVIDIA Jetson? -->
+<!-- TAGS: Jetson, Edge AI -->
+- System-on-Module (SoM) family combining an Arm CPU, NVIDIA GPU, and high-speed I/O in a compact, power-efficient package for edge AI and robotics
+- Jetson Orin is the current mainstream module; Jetson Thor (Blackwell-based) targets more demanding real-time robotics workloads like humanoid robots, delivering server-class AI performance at 40-130W
+
+<!-- CARD: What is PUE (Power Usage Effectiveness)? -->
+<!-- TAGS: PUE, Data Center Efficiency -->
+- Ratio of a data center's total facility power draw to the power actually delivered to its IT equipment; a PUE closer to 1.0 means less power is lost to overhead like cooling and power distribution
+- Used to measure and compare data center energy efficiency, distinct from compute performance metrics like TFLOPS
+
+<!-- CARD: What is GPU throttling? -->
+<!-- TAGS: Thermal Management, Cooling -->
+- A GPU automatically reduces its clock speed when it gets too hot, trading performance for protection against thermal damage
+- Slows down training/inference jobs when it occurs, making adequate cooling a direct performance factor, not just a reliability one
+
+<!-- CARD: What is liquid cooling used for in AI data centers? -->
+<!-- TAGS: Liquid Cooling, Data Center -->
+- Removes heat from high-TDP (thermal design power) GPUs like the H100/B200 more efficiently than traditional air cooling, which struggles with the heat density of dense, GPU-packed server racks

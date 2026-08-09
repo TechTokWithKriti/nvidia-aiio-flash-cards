@@ -45,6 +45,7 @@ dotColor: "#34d399"
 <!-- TAGS: BlueField, DOCA -->
 - Specialized processors combining networking, compute, and data acceleration; offload networking, storage, and security tasks from the CPU/GPU
 - Programmed and managed via NVIDIA DOCA (originally introduced as a "Data Center-on-a-Chip Architecture"; current NVIDIA materials treat DOCA as a product name without spelling out the acronym)
+- Accelerate storage protocols like NVMe-oF (NVMe over Fabrics), letting remote storage be accessed over the network at near-local latency
 
 <!-- CARD: Where are BlueField DPUs used? -->
 <!-- TAGS: BlueField, Use Cases -->
@@ -171,3 +172,13 @@ dotColor: "#34d399"
 - Topology-aware: auto-discovers the system's interconnects and picks the fastest communication pattern per collective operation and message size, rather than using one fixed strategy everywhere
 - Ships built into PyTorch and TensorFlow, providing collective operations like all-reduce, all-gather, broadcast, and reduce-scatter for distributed training
 - Complements the hardware layer rather than replacing it: NVLink/RDMA move individual transfers fast, NCCL organizes many transfers efficiently, e.g. coordinating gradient synchronization across 100 GPUs
+
+<!-- CARD: What is NVIDIA Magnum IO? -->
+<!-- TAGS: Magnum IO, Data Movement -->
+- Software development kit that eliminates I/O bottlenecks in AI, HPC, and data science workflows by accelerating storage IO, network IO, and in-network compute across multi-GPU, multi-node systems
+- An umbrella suite rather than a single library: it brings together GPUDirect Storage, NVLink, InfiniBand/RoCE networking, and NCCL under one framework for moving data between CPUs, GPUs, DPUs, and storage
+
+<!-- CARD: What is NVIDIA Air? -->
+<!-- TAGS: NVIDIA Air, Network Simulation -->
+- Cloud-hosted platform for creating a full-scale digital twin of a data center network, letting engineers validate topology, configuration, and automation before any physical hardware is deployed
+- Now offered as DSX Air within the NVIDIA DSX Platform, NVIDIA's blueprint for simulating entire AI factories (compute, networking, storage, and orchestration) ahead of a physical build-out

@@ -42,3 +42,43 @@ dotColor: "#a3e635"
 <!-- TAGS: DRIVE, Autonomous Vehicles -->
 - End-to-end, full-stack platform for autonomous vehicle development, spanning training (DGX), simulation and validation (Omniverse), and in-vehicle compute (DRIVE AGX)
 - DRIVE AGX is the in-vehicle compute platform running perception, planning, and control workloads in real time, supporting production autonomy from advanced driver-assist up to Level 4 robotaxi
+
+<!-- CARD: What is NVIDIA Riva? -->
+<!-- TAGS: Riva, Conversational AI -->
+- GPU-accelerated SDK for building and deploying customizable, real-time speech AI applications: automatic speech recognition (ASR), text-to-speech (TTS), and translation across multiple languages
+- Deployable on-premises, in the cloud, or at the edge; complements NeMo, which handles the broader training and customization side of conversational AI and LLMs
+
+<!-- CARD: What is NVIDIA DeepStream? -->
+<!-- TAGS: DeepStream, Video Analytics -->
+- Open-source, GStreamer-based SDK for building real-time streaming analytics applications across video, audio, and image data (multi-sensor processing), GPU-accelerated end-to-end
+- Used for intelligent video analytics like detecting safety violations from multiple live camera streams in retail, manufacturing, and smart-city deployments
+
+<!-- CARD: What is NVIDIA Omniverse? -->
+<!-- TAGS: Omniverse, Digital Twins -->
+- Platform of APIs, SDKs, and services, built on Pixar's OpenUSD, for real-time 3D design collaboration and physically accurate simulation
+- Used to build industrial digital twins and to generate synthetic data and simulation environments for robotics and physical AI
+
+<!-- CARD: What is NVIDIA Isaac? -->
+<!-- TAGS: Isaac, Robotics -->
+- End-to-end platform, built on Omniverse, for developing, simulating, and deploying AI-powered robots
+- Isaac Sim provides a physically accurate virtual environment (GPU-accelerated physics, sensor simulation) for designing, testing, and training robots before deployment; Isaac Lab handles the reinforcement-learning side of robot training
+
+<!-- CARD: What is NVIDIA PhysicsNeMo? -->
+<!-- TAGS: PhysicsNeMo, Physics-Informed ML -->
+- Open-source framework for physics-informed machine learning, blending physics and partial differential equations with deep learning for domains like fluid dynamics, structural mechanics, and electromagnetics
+- Formerly named NVIDIA Modulus
+
+<!-- CARD: What is NVIDIA cuOpt? -->
+<!-- TAGS: cuOpt, Logistics -->
+- GPU-accelerated optimization engine for combinatorial and linear optimization problems like vehicle routing, pickup-and-delivery, and linear/mixed-integer programming
+- Delivers sub-second solver response times for large-scale logistics problems, such as finding efficient routes for a fleet of delivery trucks; included as part of NVIDIA AI Enterprise
+
+<!-- CARD: What is NVIDIA BioNeMo? -->
+<!-- TAGS: BioNeMo, Drug Discovery -->
+- Platform for generative AI in early drug discovery focused on proteins and small molecules: 3D protein structure prediction, de novo molecule generation, and molecular docking
+- Built on the NeMo framework; the dedicated drug-discovery and biomolecular-simulation component of NVIDIA's healthcare and life-sciences platform, alongside Clara's medical imaging and genomics tools
+
+<!-- CARD: What is NVIDIA FLARE? -->
+<!-- TAGS: FLARE, Federated Learning -->
+- NVIDIA Federated Learning Application Runtime Environment: open-source SDK for federated learning, training a shared model across multiple decentralized sites without any site's raw data leaving its premises
+- Used in domains like healthcare, where hospitals collaborate on a diagnostic model while keeping patient data private and local

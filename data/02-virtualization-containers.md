@@ -41,8 +41,19 @@ dotColor: "#fbbf24"
 <!-- TAGS: Container Toolkit, Containers -->
 - Library and set of tools (formerly known as nvidia-docker) that lets containers running under Docker, containerd, Podman, or Kubernetes access the host's NVIDIA GPUs with full acceleration
 - One of the components the NVIDIA GPU Operator installs and manages automatically across a Kubernetes cluster
+- The NVIDIA Container Runtime is the specific piece that mounts GPU device nodes (e.g. /dev/nvidia0) and injects the driver into a starting container; the Container Toolkit is the broader package that includes it
 
 <!-- CARD: What is a Kubernetes ResourceQuota for GPUs? -->
 <!-- TAGS: Kubernetes, ResourceQuota -->
 - A Kubernetes API object that caps how much of a resource, including GPUs exposed to the cluster as a schedulable resource, a namespace's pods can collectively request
 - Ensures a specific number of GPU resources are guaranteed or limited for a given pod or team's namespace in a shared, multi-tenant cluster
+
+<!-- CARD: vGPU profile types -->
+<!-- TAGS: vGPU, Profiles -->
+- Q-series: virtual workstations for creative/technical professionals needing RTX Enterprise driver features; C-series: compute-focused profiles for AI/ML and CUDA workloads in VMs; B-series: virtual desktops for business users; A-series: entry-level virtual application streaming
+- Different profile series can run as time-sliced vGPUs on the same physical GPU simultaneously, as long as the total frame buffer allocated across them doesn't exceed the GPU's physical memory
+
+<!-- CARD: vGPU time-slicing -->
+<!-- TAGS: vGPU, Time-Slicing -->
+- When multiple VMs share one physical GPU via vGPU, time-slicing has them take turns accessing the GPU's compute resources in rapid succession, rather than each VM getting a dedicated, always-available slice
+- Managed by the vGPU Manager, a software component that runs in the hypervisor to handle GPU slicing and assignment to VMs

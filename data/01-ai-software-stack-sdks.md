@@ -40,6 +40,7 @@ dotColor: "#38bdf8"
 - Compute Unified Device Architecture: NVIDIA's parallel computing platform and API letting developers run general-purpose code on the GPU, not just graphics tasks, unlocking use cases like ML/AI, financial modeling, and image/video processing that GPUs couldn't handle before it existed
 - Lets code written in C, C++, Python, or Fortran run as kernels executing in parallel across thousands of GPU cores, with the CPU organizing work and the GPU executing it at scale
 - Most developers never write CUDA directly; higher-level frameworks like PyTorch and TensorFlow run on top of it, translating familiar code into GPU-parallel execution behind the scenes
+- CUDA Unified Memory lets the CPU and GPU share a single address space, with the driver automatically migrating memory pages between host and device as needed instead of requiring explicit manual copies
 
 <!-- CARD: What is cuDNN? -->
 <!-- TAGS: cuDNN, Deep Learning -->
@@ -68,3 +69,13 @@ dotColor: "#38bdf8"
 - Low-code toolkit (Train, Adapt, Optimize) built on TensorFlow and PyTorch that lets users fine-tune NVIDIA pretrained models on their own data without writing training code from scratch
 - Uses transfer learning: starts from a pretrained foundation model in the TAO model zoo and adapts it to a specific domain or task, then optimizes it to be smaller and faster at runtime
 - Covers both computer vision (classification, detection, segmentation) and conversational AI (ASR, NLP) use cases; outputs a trained model deployable via TensorRT
+
+<!-- CARD: What is CUDA-X? -->
+<!-- TAGS: CUDA-X, Software Stack -->
+- Umbrella term for NVIDIA's broader suite of GPU-accelerated libraries, tools, and microservices built on top of CUDA, spanning AI, data processing, and HPC use cases
+- cuDNN, cuBLAS, and RAPIDS are all examples of CUDA-X libraries; the name refers to the collection as a whole rather than a single installable product
+
+<!-- CARD: What is NVIDIA CUDA-Q? -->
+<!-- TAGS: CUDA-Q, Quantum Computing -->
+- Open-source platform for building hybrid quantum-classical applications, letting a single program target CPUs, GPUs, and QPUs (quantum processing units) together
+- Formerly named CUDA Quantum; distinct from cuQuantum, NVIDIA's separate, lower-level SDK for simulating quantum circuits on GPUs

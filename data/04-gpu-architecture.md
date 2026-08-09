@@ -64,3 +64,18 @@ dotColor: "#c084fc"
 <!-- TAGS: Blackwell, Architecture Gens -->
 - B100/B200/B300, introduces FP4 (NVFP4) quantization plus a 2nd-generation Transformer Engine
 - NVIDIA cites up to 30x faster real-time LLM inference vs. the previous generation, measured at the GB200 NVL72 rack-scale system level (72 GPUs, one NVLink domain) for trillion-parameter MoE models, not a single-chip comparison
+
+<!-- CARD: What is High Bandwidth Memory (HBM)? -->
+<!-- TAGS: HBM, GPU Memory -->
+- Type of GPU memory built from vertically stacked memory dies, giving much higher bandwidth than traditional GDDR memory in a smaller physical footprint
+- Data center GPUs (A100, H100, B200) use HBM because AI models and their activations live in GPU memory during training, and HBM's bandwidth is what feeds thousands of cores fast enough to keep them busy
+
+<!-- CARD: What is TFLOPS? -->
+<!-- TAGS: TFLOPS, Performance Metrics -->
+- Tera Floating-point Operations Per Second: a measure of raw compute throughput equal to one trillion floating-point calculations per second
+- Used to compare GPU performance across generations and precisions (e.g. FP16 vs FP8 TFLOPS), though real-world application speed also depends on memory bandwidth and interconnects, not TFLOPS alone
+
+<!-- CARD: Why GPUs excel at parallel AI workloads (vs CPUs) -->
+<!-- TAGS: GPU vs CPU, Fundamentals -->
+- CPUs have a small number of powerful cores optimized for fast sequential execution and branching logic; GPUs have thousands of smaller, simpler cores optimized for doing the same operation across massive amounts of data simultaneously
+- AI training and inference are dominated by matrix and vector math applied uniformly across huge tensors, a workload pattern that maps directly onto a GPU's massively parallel architecture
